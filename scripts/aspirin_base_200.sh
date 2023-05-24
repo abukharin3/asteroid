@@ -1,0 +1,17 @@
+CUDA_VISIBLE_DEVICES=0 python finetune.py \
+--evaluation_interval 200 \
+--n_labels 200 \
+--n_pts 100000 \
+--molecule aspirin \
+--comment finetune_aspirin_base_200 \
+--num_spherical 7 \
+--num_radial 6 \
+--num_blocks 4 \
+--ccsd \
+--emb_size_atom 128 \
+--emb_size_edge 128 \
+--decay_steps 1200000 \
+--warmup_steps 10000 \
+--decay_patience 50000 \
+--decay_cooldown 50000 \
+--num_steps 40000

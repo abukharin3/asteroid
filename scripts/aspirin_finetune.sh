@@ -1,0 +1,21 @@
+CUDA_VISIBLE_DEVICES=0 python finetune.py \
+--evaluation_interval 200 \
+--n_labels 200 \
+--n_pts 100000 \
+--num_steps 40000 \
+--num_spherical 7 \
+--num_radial 6 \
+--num_blocks 4 \
+--emb_size_atom 128 \
+--emb_size_edge 128 \
+--molecule aspirin \
+--n_vectors 1 \
+--batch_size 10 \
+--comment asteroid_finetune \
+--ccsd \
+--model_name model_name \
+--decay_steps 1200000 \
+--warmup_steps 10000 \
+--decay_patience 50000 \
+--decay_cooldown 50000 \
+--save_model

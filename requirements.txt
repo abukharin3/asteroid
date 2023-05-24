@@ -1,0 +1,10 @@
+numpy
+scipy>=1.3
+sympy>=1.5
+tqdm
+ase
+nglview
+numba
+jupyterlab
+torch==1.10
+torch-scatter
