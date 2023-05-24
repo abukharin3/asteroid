@@ -21,6 +21,7 @@ To pre-train GNN's with ASTEROID, we use three steps:
 
 These three steps can be done with the following command.
 
+`mkdir model_dir`
 `bash scripts/aspirin_pretrain.sh`
 
 The model_path argument needs to be changed depending on which checkpoint you use. Notice that the model_name in get_predictions.py and the load_name in pretrain_asteroid.py should correspond to one another.
