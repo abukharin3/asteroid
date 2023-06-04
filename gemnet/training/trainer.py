@@ -287,11 +287,14 @@ class Trainer:
         """
         return torch.nn.functional.l1_loss(pred, targets, reduction="mean")
 
-    def get_rmse(self, targets, pred):
+    def get_rmse(self, targets, pred, weight=None):
         """
         Mean L2 Error
         """
-        return torch.mean(torch.norm((pred - targets), p=2, dim=1))
+        if weight is None:
+            return torch.mean(torch.norm((pred - targets), p=2, dim=1))
+        else:
+            return torch.mean(torch.norm((pred - targets), p=2, dim=1).mean(-1) * weight)
 
     def get_nll(self, targets, mean_pred, var_pred):
         return torch.nn.functional.gaussian_nll_loss(

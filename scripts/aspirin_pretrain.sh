@@ -43,8 +43,8 @@ CUDA_VISIBLE_DEVICES=0 python pretrain_asteroid.py \
 --n_vectors 1 \
 --batch_size 10 \
 --revised \
---comment aspirin_pretrain_200_gamma_0.1_2000 \
+--comment aspirin_pretrain_200_base_2000 \
 --save_model \
---gamma 0.1 \
---model_name pretrain_aspirin_200EPOCH_2000_gamma0.1 \
+--base \
+--model_name pretrain_aspirin_200EPOCH_2000_base \
 --load_name pretrain_aspirin_200EPOCH_2000
