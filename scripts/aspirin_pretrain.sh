@@ -46,5 +46,6 @@ CUDA_VISIBLE_DEVICES=0 python pretrain_asteroid.py \
 --comment aspirin_pretrain_200_gamma_0.1_2000 \
 --save_model \
 --gamma 0.1 \
+--loss mae \
 --model_name pretrain_aspirin_200EPOCH_2000_gamma0.1 \
 --load_name pretrain_aspirin_200EPOCH_2000
