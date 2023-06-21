@@ -1,0 +1,16 @@
+CUDA_VISIBLE_DEVICES=0 python pretrain_asteroid.py \
+--evaluation_interval 100 \
+--num_steps 200000 \
+--num_spherical 7 \
+--num_radial 6 \
+--num_blocks 4 \
+--emb_size_atom 128 \
+--emb_size_edge 128 \
+--molecule aspirin \
+--n_vectors 1 \
+--batch_size 10 \
+--revised \
+--comment aspirin_pretrain_200_base_2000 \
+--save_model \
+--base \
+--model_name pretrain_aspirin_200_2000_base \

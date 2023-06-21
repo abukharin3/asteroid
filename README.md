@@ -13,17 +13,11 @@ To process the data, we provide some helper function in `process.py` <br>
 We also provide data we generate through MD simulation using empirical force field methods. These datasets (containing data for each of the MD17 molecules) can be downloaded from [here](https://drive.google.com/drive/folders/10l_QEoEb3WdcNGsegTzTwxxitJ-p_RLv?usp=share_link).
 
 ## Pre-training
-To pre-train GNN's with ASTEROID, we use three steps:
-- Training on accurate data
-- Bias estimation
-- Bias-aware training
-
-
-These three steps can be done with the following command.
+To pre-train GemNet with the simplest version of ASTEROID, we can run:
 
 `mkdir model_dir`
 
-`bash scripts/aspirin_pretrain.sh`
+`bash scripts/aspirin_pretrain_simple.sh`
 
 The model_path argument needs to be changed depending on which checkpoint you use. Notice that the model_name in get_predictions.py and the load_name in pretrain_asteroid.py should correspond to one another.
 
@@ -43,6 +37,13 @@ Please cite our paper and GemNet if you use the model or this code in your own w
   author = {Gasteiger, Johannes and Becker, Florian and G{\"u}nnemann, Stephan},
   booktitle={Conference on Neural Information Processing Systems (NeurIPS)},
   year = {2021}
+}
+
+@article{bukharin2023machine,
+  title={Machine Learning Force Fields with Data Cost Aware Training},
+  author={Bukharin, Alexander and Liu, Tianyi and Wang, Shengjie and Zuo, Simiao and Gao, Weihao and Yan, Wen and Zhao, Tuo},
+  journal={arXiv preprint arXiv:2306.03109},
+  year={2023}
 }
 ```
 
